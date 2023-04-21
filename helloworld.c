@@ -1,8 +1,9 @@
 #include<stdio.h>
+//main입니다.
 
 int main(int argc, char* argv[])
 {
-	printf("Hello World");
+	printf("World");
 
 	return 0;
 }
