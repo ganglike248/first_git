@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
   },
   banner: {
     backgroundColor: 'lightblue',
-    width: 80,
+    width: '25%',
     padding: 10,
     marginVertical: 30,
-    marginHorizontal: 20,
-    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'black',
   },
   bannerContent: {
     justifyContent: 'center',

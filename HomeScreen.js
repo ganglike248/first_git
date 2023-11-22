@@ -1,41 +1,40 @@
-// HomeScreen.js
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import BannerButton from './BannerButton';
 
 export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
+      {/* Your HomeScreen content here */}
+
       <View style={styles.buttonContainer}>
         {/* 홈 화면 배너 */}
-        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.banner}>
-          <View style={styles.bannerContent}>
-            <Image source={require('./assets/home_button.png')} style={styles.bannerImage} />
-            <Text style={styles.bannerText}>홈</Text>
-          </View>
-        </TouchableOpacity>
+        <BannerButton
+          text="홈"
+          iconSource={require('./assets/home_button.png')}
+          onPress={() => navigation.navigate('Home')}
+        />
+        
         {/* 채팅 시작 배너 */}
-        <TouchableOpacity onPress={() => navigation.navigate('Chat')} style={styles.banner}>
-          <View style={styles.bannerContent}>
-            <Image source={require('./assets/chat_button.png')} style={styles.bannerImage} />
-            <Text style={styles.bannerText}>채팅</Text>
-          </View>
-        </TouchableOpacity>
+        <BannerButton
+          text="채팅"
+          iconSource={require('./assets/chat_button.png')}
+          onPress={() => navigation.navigate('Chat')}
+        />
 
         {/* 달력 배너 */}
-        <TouchableOpacity onPress={() => navigation.navigate('Calendar')} style={styles.banner}>
-          <View style={styles.bannerContent}>
-            <Image source={require('./assets/calendar_button.png')} style={styles.bannerImage} />
-            <Text style={styles.bannerText}>달력</Text>
-          </View>
-        </TouchableOpacity>
+        <BannerButton
+          text="달력"
+          iconSource={require('./assets/calendar_button.png')}
+          onPress={() => navigation.navigate('Calendar')}
+        />
 
         {/* 지도 배너 */}
-        <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.banner}>
-          <View style={styles.bannerContent}>
-            <Image source={require('./assets/map_button.png')} style={styles.bannerImage} />
-            <Text style={styles.bannerText}>지도</Text>
-          </View>
-        </TouchableOpacity>
+        <BannerButton
+          text="지도"
+          iconSource={require('./assets/map_button.png')}
+          onPress={() => navigation.navigate('Map')}
+        />
       </View>
     </View>
   );
@@ -49,29 +48,9 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     position: 'absolute',
-    bottom: 0,
+    bottom: -30,
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
-  },
-  banner: {
-    backgroundColor: 'lightblue',
-    width: 80,
-    padding: 10,
-    borderRadius: 20,
-  },
-  bannerContent: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  bannerText: {
-    textAlign: 'center',
-    fontSize: 13,
-    fontWeight: 'bold',
-    color: 'white',
-  },
-  bannerImage: {
-    width: 30,
-    height: 30,
   },
 });
