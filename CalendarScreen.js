@@ -7,7 +7,7 @@ import BannerButton from './BannerButton';
 export default function CalendarScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>달력</Text>
+      <Text style={styles.title}>달력1</Text>
       <Calendar
         // Calendar props go here
         // You can customize the appearance and behavior of the calendar
